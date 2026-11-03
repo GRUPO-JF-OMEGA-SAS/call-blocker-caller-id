@@ -1,0 +1,43 @@
+Call Blocker: Caller ID is a phone and messaging app that helps you take control of unwanted calls. Block spam callers, see who is calling, and manage your calls and text messages in one place.
+
+IMPORTANT: this app works as your default phone app and your default SMS app. To block incoming calls, show caller ID and handle messages, Android asks you to set Call Blocker: Caller ID as the default Phone app and default SMS app. You choose this on a clear set-default screen after the short introduction, and you can switch back to another app in Android settings at any time.
+
+CALL BLOCKER
+- Block any number straight from your recent calls or from a call's detail screen
+- Calls from blocked numbers are screened and stopped before they ring
+- Review and manage your blocked numbers list, and unblock a number whenever you like
+- A simple way to deal with spam callers, scam calls and nuisance numbers you do not want to hear from
+
+CALLER ID
+- See the caller's name from your own contacts the moment a call comes in
+- Clear incoming call screen with answer and decline buttons
+- Know who is calling before you pick up
+
+DIALER AND RECENTS
+- Easy dialpad for placing calls
+- Recents list of your call history, so you can call back, check details or block a number
+- Missed call notifications
+
+MESSAGES (DEFAULT SMS APP)
+- Read your SMS and MMS conversations in clean message threads
+- Compose and send new text messages
+- Receive new messages and get notified when they arrive
+
+SETTINGS AND LANGUAGES
+- Choose your app language
+- Manage blocked numbers
+- Rate, share and check for updates
+- Privacy Policy link inside the app
+
+WHY THE APP ASKS FOR PERMISSIONS
+Each permission is used only for the feature described. Your call log, contacts and messages stay on your device and are used to run the app's features.
+- Phone, call log (READ_CALL_LOG, READ_PHONE_STATE, READ_PHONE_NUMBERS): show your recent calls, detect incoming calls and let you block numbers from your history.
+- Make and answer calls (CALL_PHONE, ANSWER_PHONE_CALLS): place calls from the dialpad and answer calls from the incoming call screen.
+- Contacts (READ_CONTACTS): match incoming numbers and message senders to contact names for caller ID.
+- SMS and MMS (READ_SMS, SEND_SMS, RECEIVE_SMS, RECEIVE_MMS): receive, show and send your text messages as the default SMS app.
+- Notifications (POST_NOTIFICATIONS): alert you to missed calls and new messages.
+
+PRIVACY
+No account, sign-up or login is needed, and all features are available right away. The app is free and shows ads, supported by Google AdMob and ad mediation partners; the ads use an advertising ID, and you can review the consent choices shown in the app. Please read the Privacy Policy before use: https://grupo-jf-omega-sas.github.io/call-blocker-caller-id/privacy/
+
+Download Call Blocker: Caller ID to block unwanted calls, see who is calling and keep your calls and messages together in one phone app.

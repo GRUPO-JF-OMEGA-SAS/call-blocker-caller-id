@@ -1,0 +1,7 @@
+Welcome to Call Blocker: Caller ID 1.0.0!
+- Block unwanted and spam callers from recents or call details
+- Caller ID with names from your contacts on incoming calls
+- Dialpad and recents as your default phone app
+- Send and receive SMS and MMS as your default SMS app
+- Manage your blocked numbers list
+- Choose your language in settings
