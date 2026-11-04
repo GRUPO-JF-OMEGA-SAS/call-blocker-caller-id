@@ -6,75 +6,207 @@
 <title>ASO Assets — Call Blocker: Caller ID (05i)</title>
 <style>
 :root {
-  --bg: #0A0A1F;
-  --card: #121233;
-  --border: rgba(124,92,255,.18);
-  --text: #F3F2FF;
-  --sub: #B4B2D9;
-  --accent: #7C5CFF;
-  --link: #3DE0FF;
-  --green: #5CF2D6;
-  --red: #FF6A4D;
-  --radius: 12px;
+  --bg: #F4F7FB; --card: #FFFFFF; --border: #D4DEEA; --text: #0F1E33;
+  --sub: #44566E; --primary: #1763D6; --accent: #0E7C91; --green: #1A8754;
+  --red: #D43B2F; --radius: 14px; --gold: #B8860B;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 24px 16px; max-width: 860px; margin: 0 auto; line-height: 1.5; }
-h1 { font-size: 1.5rem; margin-bottom: 4px; }
-.sub { color: var(--sub); font-size: .85rem; margin-bottom: 28px; }
-.sub code { background: rgba(124,92,255,.15); padding: 2px 6px; border-radius: 4px; font-size: .8rem; }
-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; }
-section h2 { font-size: 1.05rem; color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); padding: 24px 16px 56px; max-width: 900px; margin: 0 auto; line-height: 1.6; }
+h1 { font-size: 1.5rem; margin-bottom: 4px; color: var(--text); }
+.sub { color: var(--sub); font-size: .85rem; margin-bottom: 24px; }
+.sub code { background: #E7EEF8; padding: 2px 8px; border-radius: 5px; font-size: .8rem; color: var(--primary); font-weight: 600; }
+section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+section h2 { font-size: 1.05rem; color: var(--primary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 table { width: 100%; border-collapse: collapse; }
-td { padding: 7px 0; vertical-align: top; border-bottom: 1px solid var(--border); }
-td:first-child { color: var(--sub); width: 200px; font-size: .85rem; }
-td:last-child { word-break: break-all; }
+td { padding: 8px 0; vertical-align: top; border-bottom: 1px solid #EEF2F7; font-size: .9rem; }
+td:first-child { color: var(--sub); width: 180px; font-size: .82rem; font-weight: 500; }
+td:last-child { word-break: break-word; }
 tr:last-child td { border-bottom: none; }
-a { color: var(--link); text-decoration: none; }
+a { color: var(--primary); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.badge { display: inline-block; font-size: .7rem; padding: 2px 7px; border-radius: 6px; font-weight: 600; vertical-align: middle; margin-left: 6px; }
-.live { background: rgba(92,242,214,.15); color: var(--green); }
-.file { background: rgba(124,92,255,.12); color: var(--sub); }
-.vid { background: rgba(61,224,255,.12); color: var(--link); }
-.preview { display: inline-block; max-width: 48px; max-height: 48px; border-radius: 6px; vertical-align: middle; margin-right: 8px; }
-.copy-btn { background: rgba(124,92,255,.2); border: none; color: var(--link); font-size: .7rem; padding: 2px 8px; border-radius: 4px; cursor: pointer; margin-left: 6px; }
-.copy-btn:hover { background: rgba(124,92,255,.4); }
-@media(max-width:600px) { td:first-child { width: 120px; } .preview { max-width: 36px; max-height: 36px; } }
+.badge { display: inline-block; font-size: .68rem; padding: 2px 8px; border-radius: 6px; font-weight: 600; vertical-align: middle; margin-left: 6px; }
+.live { background: #E8F5EE; color: var(--green); }
+.file { background: #E7EEF8; color: var(--sub); }
+.vid { background: #E3F6FA; color: var(--accent); }
+.build { background: #FFF8E7; color: var(--gold); }
+.preview { display: inline-block; max-width: 48px; max-height: 48px; border-radius: 10px; vertical-align: middle; margin-right: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.header-row { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.header-row img { width: 72px; height: 72px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+.text-block { background: #F8FAFB; border: 1px solid #E4EAF0; border-radius: 10px; padding: 14px 16px; font-size: .85rem; white-space: pre-wrap; line-height: 1.55; max-height: 300px; overflow-y: auto; margin: 8px 0; color: var(--text); }
+.text-block.short { max-height: none; font-size: .95rem; font-weight: 500; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.tag { background: #E7EEF8; color: var(--primary); border-radius: 999px; padding: 4px 12px; font-size: .78rem; font-weight: 500; }
+.screenshots { display: flex; gap: 10px; overflow-x: auto; padding: 8px 0; }
+.screenshots img { height: 280px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.08); flex-shrink: 0; }
+.feature-img { width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.08); margin: 8px 0; }
+.copy-btn { background: #E7EEF8; border: 1px solid var(--border); color: var(--primary); font-size: .72rem; padding: 3px 10px; border-radius: 6px; cursor: pointer; margin-left: 8px; font-weight: 600; }
+.copy-btn:hover { background: #D4E2F5; }
+.char-count { color: var(--sub); font-size: .75rem; font-weight: 400; }
+@media(max-width:600px) { td:first-child { width: 110px; } .screenshots img { height: 200px; } }
 </style>
 </head>
 <body>
 
-<h1>📦 ASO Assets — Call Blocker: Caller ID</h1>
-<p class="sub">App <code>05i</code> · Store <code>a022</code> GRUPO JF OMEGA SAS · Package <code>com.callerid.spamblock.shield</code></p>
+<div class="header-row">
+  <img src="icon_512.png" alt="Call Blocker icon">
+  <div>
+    <h1>Call Blocker: Caller ID</h1>
+    <p class="sub">App <code>05i</code> &middot; Store <code>a022</code> GRUPO JF OMEGA SAS &middot; <code>com.callerid.spamblock.shield</code></p>
+  </div>
+</div>
+
+<!-- ===== METADATA ===== -->
+<section>
+<h2>Title <span class="char-count">(23/30)</span> <button class="copy-btn" onclick="copy('title-text')">Copy</button></h2>
+<div id="title-text" class="text-block short">Call Blocker: Caller ID</div>
+</section>
 
 <section>
-<h2>📋 Hướng dẫn Submit</h2>
+<h2>Short Description <span class="char-count">(74/80)</span> <button class="copy-btn" onclick="copy('short-text')">Copy</button></h2>
+<div id="short-text" class="text-block short">Block spam calls, see who's calling, and manage calls and texts in one app</div>
+</section>
+
+<section>
+<h2>Full Description <span class="char-count">(2937/4000)</span> <button class="copy-btn" onclick="copy('full-text')">Copy</button></h2>
+<div id="full-text" class="text-block">Call Blocker: Caller ID is a phone and messaging app that helps you take control of unwanted calls. Block spam callers, see who is calling, and manage your calls and text messages in one place.
+
+IMPORTANT: this app works as your default phone app and your default SMS app. To block incoming calls, show caller ID and handle messages, Android asks you to set Call Blocker: Caller ID as the default Phone app and default SMS app. You choose this on a clear set-default screen after the short introduction, and you can switch back to another app in Android settings at any time.
+
+CALL BLOCKER
+- Block any number straight from your recent calls or from a call's detail screen
+- Calls from blocked numbers are screened and stopped before they ring
+- Review and manage your blocked numbers list, and unblock a number whenever you like
+- A simple way to deal with spam callers, scam calls and nuisance numbers you do not want to hear from
+
+CALLER ID
+- See the caller's name from your own contacts the moment a call comes in
+- Clear incoming call screen with answer and decline buttons
+- Know who is calling before you pick up
+
+DIALER AND RECENTS
+- Easy dialpad for placing calls
+- Recents list of your call history, so you can call back, check details or block a number
+- Missed call notifications
+
+MESSAGES (DEFAULT SMS APP)
+- Read your SMS and MMS conversations in clean message threads
+- Compose and send new text messages
+- Receive new messages and get notified when they arrive
+
+SETTINGS AND LANGUAGES
+- Choose your app language
+- Manage blocked numbers
+- Rate, share and check for updates
+- Privacy Policy link inside the app
+
+WHY THE APP ASKS FOR PERMISSIONS
+Each permission is used only for the feature described. Your call log, contacts and messages stay on your device and are used to run the app's features.
+- Phone, call log (READ_CALL_LOG, READ_PHONE_STATE, READ_PHONE_NUMBERS): show your recent calls, detect incoming calls and let you block numbers from your history.
+- Make and answer calls (CALL_PHONE, ANSWER_PHONE_CALLS): place calls from the dialpad and answer calls from the incoming call screen.
+- Contacts (READ_CONTACTS): match incoming numbers and message senders to contact names for caller ID.
+- SMS and MMS (READ_SMS, SEND_SMS, RECEIVE_SMS, RECEIVE_MMS): receive, show and send your text messages as the default SMS app.
+- Notifications (POST_NOTIFICATIONS): alert you to missed calls and new messages.
+
+PRIVACY
+No account, sign-up or login is needed, and all features are available right away. The app is free and shows ads, supported by Google AdMob and ad mediation partners; the ads use an advertising ID, and you can review the consent choices shown in the app. Please read the Privacy Policy before use: https://grupo-jf-omega-sas.github.io/call-blocker-caller-id/privacy/
+
+Download Call Blocker: Caller ID to block unwanted calls, see who is calling and keep your calls and messages together in one phone app.</div>
+</section>
+
+<section>
+<h2>Release Notes <span class="char-count">(337/500)</span> <button class="copy-btn" onclick="copy('release-text')">Copy</button></h2>
+<div id="release-text" class="text-block">Welcome to Call Blocker: Caller ID 1.0.0!
+- Block unwanted and spam callers from recents or call details
+- Caller ID with names from your contacts on incoming calls
+- Dialpad and recents as your default phone app
+- Send and receive SMS and MMS as your default SMS app
+- Manage your blocked numbers list
+- Choose your language in settings</div>
+</section>
+
+<section>
+<h2>Tags / Keywords</h2>
+<div class="tag-list">
+  <span class="tag">call blocker</span>
+  <span class="tag">caller id</span>
+  <span class="tag">spam call blocker</span>
+  <span class="tag">block calls</span>
+  <span class="tag">block spam calls</span>
+  <span class="tag">phone dialer</span>
+  <span class="tag">default phone app</span>
+  <span class="tag">sms app</span>
+  <span class="tag">messages</span>
+  <span class="tag">dialer</span>
+  <span class="tag">recents</span>
+  <span class="tag">unwanted calls</span>
+  <span class="tag">contacts caller id</span>
+  <span class="tag">call screening</span>
+</div>
+</section>
+
+<!-- ===== VISUAL ASSETS ===== -->
+<section>
+<h2>Icon 512x512</h2>
 <table>
-<tr><td>ASO Guide</td><td><a href="aso-guide.md">aso-guide.md</a> <span class="badge file">MD</span></td></tr>
-<tr><td>Landing Page</td><td><a href="landing.html">landing.html</a> <span class="badge file">HTML</span></td></tr>
+<tr><td>Icon</td><td><img src="icon_512.png" class="preview" alt="icon"> <a href="icon_512.png">icon_512.png</a> <span class="badge file">168 KB</span></td></tr>
 </table>
 </section>
 
 <section>
-<h2>⬇️ Downloads <span class="badge live">BUILD</span></h2>
-<table>
-<tr><td>Trang tải build</td><td><a href="downloads/">downloads/</a> — APK + AAB (organic release, signed)</td></tr>
-</table>
+<h2>Feature Graphic 1024x500</h2>
+<img src="feature_graphic.png" class="feature-img" alt="Feature graphic">
+<p style="margin-top:6px;"><a href="feature_graphic.png">feature_graphic.png</a> <span class="badge file">21 KB</span></p>
 </section>
 
 <section>
-<h2>⚖️ Legal <span class="badge live">LIVE</span></h2>
+<h2>Screenshots (Phone)</h2>
+<div class="screenshots">
+  <a href="screenshots/01.png"><img src="screenshots/01.png" alt="Screenshot 1"></a>
+  <a href="screenshots/02.png"><img src="screenshots/02.png" alt="Screenshot 2"></a>
+  <a href="screenshots/03.png"><img src="screenshots/03.png" alt="Screenshot 3"></a>
+  <a href="screenshots/04.png"><img src="screenshots/04.png" alt="Screenshot 4"></a>
+  <a href="screenshots/05.png"><img src="screenshots/05.png" alt="Screenshot 5"></a>
+</div>
+</section>
+
+<!-- ===== DOWNLOADS ===== -->
+<section>
+<h2>Downloads <span class="badge build">BUILD</span></h2>
 <table>
-<tr><td>Privacy Policy</td><td><a href="privacy/">privacy/</a></td></tr>
-<tr><td>Terms of Service</td><td><a href="terms/">terms/</a></td></tr>
-<tr><td>Privacy (source)</td><td><a href="privacy.md">privacy.md</a></td></tr>
-<tr><td>Terms (source)</td><td><a href="terms.md">terms.md</a></td></tr>
+<tr><td>Trang build</td><td><a href="downloads/">downloads/</a> — Debug APK + Release APK + AAB (organic, signed key0)</td></tr>
 </table>
 </section>
 
+<!-- ===== LEGAL ===== -->
 <section>
-<h2>🎬 Video xin quyền <span class="badge vid">5 VIDEO</span></h2>
+<h2>Legal <span class="badge live">LIVE</span></h2>
 <table>
-<tr><td>Demo tổng hợp (CHÍNH)</td><td><a href="videos/default_handler_demo.mp4">default_handler_demo.mp4</a> <span class="badge vid">5.4 MB</span></td></tr>
+<tr><td>Privacy Policy</td><td><a href="privacy/">privacy/</a> <span class="badge live">PASS</span></td></tr>
+<tr><td>Terms of Service</td><td><a href="terms/">terms/</a> <span class="badge live">PASS</span></td></tr>
+</table>
+</section>
+
+<!-- ===== DATA SAFETY ===== -->
+<section>
+<h2>Data Safety</h2>
+<table>
+<tr><td>Import file</td><td><a href="data_safety.csv">data_safety.csv</a> <span class="badge file">Import Play Console</span></td></tr>
+<tr><td>Giải thich</td><td><a href="data_safety.md">data_safety.md</a></td></tr>
+<tr><td>Thu thap DL ca nhan</td><td>CO (crash logs, diagnostics, app interactions, device IDs)</td></tr>
+<tr><td>Ma hoa truyen tai</td><td>CO (Firebase/AdMob/mediation HTTPS)</td></tr>
+<tr><td>Tai khoan nguoi dung</td><td>KHONG (khong dang nhap)</td></tr>
+<tr><td>Shared data</td><td>Device/advertising ID (ad SDKs: AdMob, AppLovin, Meta, Adjust, Facebook, TikTok)</td></tr>
+</table>
+</section>
+
+<!-- ===== PERMISSIONS ===== -->
+<section>
+<h2>Permission Declarations <span class="badge vid">5 VIDEO</span></h2>
+<table>
+<tr><td>Declarations guide</td><td><a href="permissions_declarations.md">permissions_declarations.md</a></td></tr>
+</table>
+<table style="margin-top:12px;">
+<tr><td>Demo tong hop (CHINH)</td><td><a href="videos/default_handler_demo.mp4">default_handler_demo.mp4</a> <span class="badge vid">5.4 MB</span></td></tr>
 <tr><td>Call Log</td><td><a href="videos/read_call_log.mp4">read_call_log.mp4</a> <span class="badge vid">155 KB</span></td></tr>
 <tr><td>SMS / Messages</td><td><a href="videos/sms_group.mp4">sms_group.mp4</a> <span class="badge vid">777 KB</span></td></tr>
 <tr><td>Contacts</td><td><a href="videos/read_contacts.mp4">read_contacts.mp4</a> <span class="badge vid">564 KB</span></td></tr>
@@ -82,42 +214,30 @@ a:hover { text-decoration: underline; }
 </table>
 </section>
 
+<!-- ===== GUIDES ===== -->
 <section>
-<h2>🖼️ Asset thị giác</h2>
+<h2>Guides & Sources</h2>
 <table>
-<tr><td>Icon 512×512</td><td><img src="icon_512.png" class="preview" alt="icon"> <a href="icon_512.png">icon_512.png</a></td></tr>
-<tr><td>Feature Graphic 1024×500</td><td><a href="feature_graphic.png">feature_graphic.png</a> <span class="badge file">1.4 MB</span></td></tr>
-<tr><td>Screenshot 01</td><td><a href="screenshots/01.png">screenshots/01.png</a></td></tr>
-<tr><td>Screenshot 02</td><td><a href="screenshots/02.png">screenshots/02.png</a></td></tr>
-<tr><td>Screenshot 03</td><td><a href="screenshots/03.png">screenshots/03.png</a></td></tr>
-<tr><td>Screenshot 04</td><td><a href="screenshots/04.png">screenshots/04.png</a></td></tr>
-<tr><td>Screenshot 05</td><td><a href="screenshots/05.png">screenshots/05.png</a></td></tr>
+<tr><td>ASO Guide</td><td><a href="aso-guide.md">aso-guide.md</a></td></tr>
+<tr><td>Landing Page</td><td><a href="landing.html">landing.html</a></td></tr>
+<tr><td>Compliance Census</td><td><a href="compliance_census.md">compliance_census.md</a></td></tr>
+<tr><td>Review Notes</td><td><a href="review_notes.md">review_notes.md</a></td></tr>
 </table>
 </section>
 
-<section>
-<h2>📝 Metadata</h2>
-<table>
-<tr><td>Title (23/30)</td><td><a href="title.txt">title.txt</a></td></tr>
-<tr><td>Short description (74/80)</td><td><a href="short_description.txt">short_description.txt</a></td></tr>
-<tr><td>Full description (2937/4000)</td><td><a href="full_description.txt">full_description.txt</a></td></tr>
-<tr><td>Release notes (337/500)</td><td><a href="release_notes.txt">release_notes.txt</a></td></tr>
-<tr><td>Tags / Keywords</td><td><a href="tags.txt">tags.txt</a></td></tr>
-</table>
+<section style="background:transparent;border:none;padding:10px 0;text-align:center;box-shadow:none;">
+<p style="color:var(--sub);font-size:.75rem;">App-Factory &middot; ASO run #499 &middot; 2026-11-04 &middot; Icon &amp; feature graphic: Trust-Light</p>
 </section>
 
-<section>
-<h2>🔒 Data Safety & Permissions</h2>
-<table>
-<tr><td>Data Safety CSV</td><td><a href="data_safety.csv">data_safety.csv</a> <span class="badge file">Import Play Console</span></td></tr>
-<tr><td>Data Safety (giải thích)</td><td><a href="data_safety.md">data_safety.md</a></td></tr>
-<tr><td>Permissions Declarations</td><td><a href="permissions_declarations.md">permissions_declarations.md</a></td></tr>
-</table>
-</section>
-
-<section style="background:transparent;border:none;padding:10px 0;text-align:center;">
-<p style="color:var(--sub);font-size:.75rem;">App-Factory · ASO run #499 · 2026-11-03</p>
-</section>
-
+<script>
+function copy(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+    const btn = el.parentElement.querySelector('.copy-btn');
+    if (btn) { const orig = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = orig, 1500); }
+  });
+}
+</script>
 </body>
 </html>
