@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Call Blocker &amp; Caller ID — Tải bản build</title>
+<style>
+  :root { --bg:#F4F7FB; --card:#FFFFFF; --primary:#1763D6; --cta1:#1E6FE6; --cta2:#1457C7;
+          --text:#0F1E33; --sub:#44566E; --line:#D4DEEA; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         background:var(--bg); color:var(--text); }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 16px 56px; }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:8px; }
+  header img { width:72px; height:72px; border-radius:18px; }
+  h1 { font-size:22px; margin:0; }
+  .muted { color:var(--sub); font-size:14px; margin:2px 0 0; }
+  .meta { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
+  .chip { background:#E7EEF8; color:var(--primary); border-radius:999px; padding:5px 12px; font-size:13px; font-weight:600; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; margin-bottom:16px; }
+  .card h2 { margin:0 0 4px; font-size:17px; }
+  .card p { margin:0 0 14px; color:var(--sub); font-size:14px; }
+  .dl { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none;
+        background:linear-gradient(90deg,var(--cta1),var(--cta2)); color:#fff; font-weight:700;
+        padding:13px 22px; border-radius:999px; font-size:15px; }
+  .dl:active { opacity:.9; }
+  .row { display:flex; flex-wrap:wrap; gap:10px 20px; margin-top:12px; font-size:12.5px; color:var(--sub); }
+  code { background:#EEF3FA; padding:2px 6px; border-radius:6px; font-size:12px; word-break:break-all; }
+  footer { color:var(--sub); font-size:12.5px; margin-top:28px; text-align:center; }
+  a.back { color:var(--primary); text-decoration:none; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="../icon_512.png" alt="Call Blocker icon" />
+    <div>
+      <h1>Call Blocker &amp; Caller ID</h1>
+      <p class="muted">com.callerid.spamblock.shield</p>
+    </div>
+  </header>
+
+  <div class="meta">
+    <span class="chip">v1.0.0 (code 1)</span>
+    <span class="chip">flavor: organic</span>
+    <span class="chip">build: release (đã ký)</span>
+    <span class="chip">ngày: 2026-11-04</span>
+  </div>
+
+  <div class="card">
+    <h2>APK — cài trực tiếp lên máy</h2>
+    <p>Dùng để cài/thử nghiệm trên thiết bị Android (bật "Cài từ nguồn không rõ").</p>
+    <a class="dl" href="call-blocker-caller-id-organic-release.apk" download>⬇ Tải APK (33 MB)</a>
+    <div class="row">
+      <span>SHA-256: <code>216a7c105f6b6d830bf8b7ffd0ca99a31b7adcb2c6aca880cfe4bd3fd0ebe98d</code></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>AAB — App Bundle (nộp Google Play)</h2>
+    <p>Dùng để upload lên Google Play Console (Play tự sinh APK cho từng thiết bị).</p>
+    <a class="dl" href="call-blocker-caller-id-organic-release.aab" download>⬇ Tải AAB (38 MB)</a>
+    <div class="row">
+      <span>SHA-256: <code>339b6a1c8f0321963abf2f623ec64d5c59a260f63d2f0290c6a1d7b570dc85a4</code></span>
+    </div>
+  </div>
+
+  <p><a class="back" href="../">← Về trang chính</a></p>
+  <footer>
+    Bản build release organic, ký bằng keystore phát hành (alias key0). Nguồn:
+    af-products/call-blocker-caller-id @ tag v1.0.0-rc1.
+  </footer>
+</div>
+</body>
+</html>
